@@ -1,0 +1,7 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "apkUrl": "https://github.com/shariqueahmad108-ship-it/affiliation-alerts-updates/releases/download/v1.1/AffiliationAlerts.apk",
+  "sha256": "322538e446d9df89e007fe34b261122a4f9be68efdc724c89f547a6d43a197c6",
+  "notes": "First release with in-app updates: 13 councils (UGC, NMC, NAAC, NCTE, DCI, COA, NCH, RCI, VCI added), website status screen and outage alerts."
+}

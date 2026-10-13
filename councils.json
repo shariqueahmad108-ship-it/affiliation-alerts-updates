@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "minAppVersion": 2,
+  "councils": [
+    {"key": "pci", "short": "PCI", "name": "Pharmacy Council of India", "website": "https://pci.gov.in/en/blog/?category=Circulars", "color": "#00897B", "pdf": "from_page", "reader": "pci"},
+    {"key": "inc", "short": "INC", "name": "Indian Nursing Council", "website": "https://www.indiannursingcouncil.org/special-attention", "color": "#D81B60", "reader": "inc"},
+    {"key": "bci", "short": "BCI", "name": "Bar Council of India", "website": "https://www.barcouncilofindia.org/info/notifications/all-noty", "color": "#3949AB", "pdf": "website_only", "reader": "bci"},
+    {"key": "aicte", "short": "AICTE", "name": "All India Council for Technical Education", "website": "https://www.aicte.gov.in/", "color": "#EF6C00", "reader": "aicte"},
+
+    {"key": "ugc", "short": "UGC", "name": "University Grants Commission", "website": "https://www.ugc.gov.in/", "color": "#1565C0", "reader": "html",
+     "pages": [{"urls": ["https://www.ugc.gov.in/", "https://ugc.gov.in/"],
+                "sections": [{"container": ".box-container:has(marquee)", "categorySelector": ".price-top", "item": "marquee > panel", "dateNext": "h6"}]}]},
+
+    {"key": "nmc", "short": "NMC", "name": "National Medical Commission", "website": "https://www.nmc.org.in/", "color": "#C62828", "reader": "html",
+     "pages": [{"urls": ["https://nmc.org.in/whats-new", "https://www.nmc.org.in/whats-new"],
+                "sections": [{"category": "What's New", "item": "tr.wn-tr", "link": "a.wn-title-link", "strip": ["^\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{4}\\s*[-–]\\s*"]}]},
+               {"urls": ["https://nmc.org.in/", "https://www.nmc.org.in/"],
+                "sections": [{"category": "What's New", "item": ".notice-item", "strip": ["^\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{4}\\s*[-–]\\s*"]}]}]},
+
+    {"key": "naac", "short": "NAAC", "name": "National Assessment and Accreditation Council", "website": "https://naac.gov.in/index.php/en/", "color": "#6A1B9A", "reader": "html",
+     "pages": [{"urls": ["https://naac.gov.in/index.php/en/", "https://www.naac.gov.in/index.php/en/"],
+                "sections": [{"category": "Announcements", "item": "h4.homeHeading:containsOwn(Announcements) + marquee li"},
+                             {"category": "Notifications", "item": "h4.homeHeading:containsOwn(Notifications) + marquee li"}]}]},
+
+    {"key": "ncte", "short": "NCTE", "name": "National Council for Teacher Education", "website": "https://web.ncte.gov.in/en", "color": "#2E7D32", "reader": "html",
+     "pages": [{"urls": ["https://web.ncte.gov.in/en", "https://www.ncte.gov.in/en"],
+                "sections": [{"category": "Recent Announcements", "container": ".card:has(h5.title1)", "item": "ul.fa-ul > li", "titleFromItem": true}]}]},
+
+    {"key": "dci", "short": "DCI", "name": "Dental Council of India", "website": "https://dciindia.gov.in/", "color": "#00838F", "reader": "html",
+     "pages": [{"urls": ["https://dciindia.gov.in/", "https://www.dciindia.gov.in/"],
+                "sections": [{"category": "Notices", "item": "div.notice-card", "link": "a.readmore-link", "title": ".notice-text", "date": ".notice-date"}]}]},
+
+    {"key": "coa", "short": "COA", "name": "Council of Architecture", "website": "https://coa.gov.in/", "color": "#795548", "reader": "html", "max": 40,
+     "pages": [{"urls": ["https://coa.gov.in/"],
+                "sections": [{"category": "Notifications", "item": "#home li", "title": "p", "date": "span"},
+                             {"category": "Interventions & Letters", "item": "#menu1 li", "title": "p", "date": "span"}]}]},
+
+    {"key": "nch", "short": "NCH", "name": "National Commission for Homoeopathy", "website": "https://www.nch.org.in/", "color": "#558B2F", "reader": "html",
+     "pages": [{"urls": ["https://www.nch.org.in/", "https://nch.org.in/"],
+                "sections": [{"category": "Latest Updates", "item": "li > a:has(div.list-content)", "title": "div.list-content"}]}]},
+
+    {"key": "rci", "short": "RCI", "name": "Rehabilitation Council of India", "website": "https://rehabcouncil.nic.in/", "color": "#AD1457", "pdf": "from_page", "reader": "html",
+     "pages": [{"urls": ["https://rehabcouncil.nic.in/"],
+                "sections": [{"container": "div.vc_tta-panel:not(#forms):not(#tenders):not(#Recruitments)", "categorySelector": ".vc_tta-panel-title", "item": "div.gen-list li"}]}]},
+
+    {"key": "vci", "short": "VCI", "name": "Veterinary Council of India", "website": "https://vci.dahd.gov.in/", "color": "#4E342E", "reader": "html",
+     "pages": [{"urls": ["https://vci.dahd.gov.in/"],
+                "sections": [{"category": "News & Updates", "item": ".item-list li:has(.views-field-field-date)", "link": ".views-field-title a[href]", "date": ".views-field-field-date"}]}]}
+  ]
+}
